@@ -27,3 +27,18 @@ const images = [
     alt: 'Zebras on Zebra',
   },
 ];
+
+//Отримуємо посилання на елемент ul.gallery
+const galleryElement = document.querySelector('.gallery');
+console.log(galleryElement);
+
+//Додаємщ зображення в DOM
+images.forEach((image) => {
+  const li = document.createElement('li');
+  const img = document.createElement('img');
+
+  img.src = image.url;
+  img.alt = image.alt;
+  li.appendChild(img);
+  galleryElement.appendChild(li);
+})
